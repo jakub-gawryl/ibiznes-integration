@@ -288,11 +288,6 @@ export interface IiBizOrderParams {
   Defni?: number;
 }
 
-interface IiBizExportConfig {
-  id: string;
-  no: number;
-}
-
 export interface IiBizOrderItemParams {
 
   /**
