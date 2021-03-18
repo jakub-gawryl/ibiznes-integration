@@ -22,7 +22,7 @@ ibiz.addOrder({
   Mc: 1,                // Required
   Nr: 1,                // Required
   Rok: 2020,            // Required
-  DWy: '20210305',      // Required
+  DWy: '20210101',      // Required (format YYYYMMDD)
   items: [              // Required
     {
       Nazw: 'Patchcord',// Required
@@ -54,7 +54,8 @@ ibiz.addOrder({
 // Create XML structure
 const resultXml = ibiz.getXml();
 
-// resultXml can be sent via 
+// resultXml can be sent via express or saved as file and serverd
+// via standard http server (eg. Apache) or FTP...
 
 ```
 
