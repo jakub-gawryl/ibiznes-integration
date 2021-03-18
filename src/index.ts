@@ -168,7 +168,7 @@ export interface IiBizOrderParams {
   NrR?: string;
 
   /** 11. Data wystawienia (RRRRMMDD) */
-  DWy?: string;
+  DWy: string;
 
   /** 12. Data wykonania zamówienia */
   Data?: string;
