@@ -121,7 +121,11 @@ export default class iBizExport {
 
       // Add item parameters
       for (const key in item) {
-        itemDoc.ZAPIS.push({[key]: item[key]} as any)
+        const value = (key === 'il')
+          ? `${item[key]}`.replace('.', ',')
+          : item[key];
+
+        itemDoc.ZAPIS.push({[key]: value} as any)
       }
 
       // Add constans parameters
@@ -326,9 +330,8 @@ export interface IiBizOrderItemParams {
   /** 84. Procent podatku VAT (np. "23%") */
   NVAT?: string;
 
-  // TODO - zmodyfikować decimal point?
   /** 85. Ilość - dozwolone wartości ułakowe (UWAGA - przecinek jako decimal point np. 1,000) */
-  il?: string;
+  il?: number;
 
   /** 86. Cena (netto) usługi */
   CN?: number;
