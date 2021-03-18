@@ -1,0 +1,8 @@
+node_modules
+src
+
+.github
+.gitignore
+gulpfile.js
+nodemon.json
+tsconfig.json
